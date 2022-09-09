@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Uncial+Antiqua&display=swap');
+
+/*Universal*/
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: content-box;
+}
+
+/*header*/
+header{
+    display: flex;
+    flex-flow: column;
+}
+
+/*hero*/
+.hero{
+    display: flex;
+    flex-flow: column;
+    height: 50vh;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before{
+    content: "";
+    background: url("./images/friends.webp") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.hugs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    background: rgb(0,0,0,0.4);
+}
+
+.hugs img{
+    width: 30%;
+}
+
+.hugs h1{
+    font-family: 'Uncial Antiqua', cursive;
+    color: white;
+    font-size: 5rem;
+    display: inline-block;
+}
+
+.credit {
+    margin-top: auto;
+    text-align: center;
+    color: white;
+    font-size: 0.5rem;
+}
+
+.credit a{
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.credit a:hover {
+    color: violet;
+}
+
+/*Main*/
+
+/*Sign up content*/
+.sign-up-content{
+    width: min(80%,650px);
+    margin: 2rem auto 1rem;
+    font-weight: bold;
+}
+
+.sign-up-content a{
+    text-decoration: none;
+    color: #e63a50;
+    cursor: pointer;
+}
+
+.sign-up-content a:hover {
+    color: #a61527;
+}
+/*sign up form*/
+.sign-up-form{
+    display: flex;
+    flex-flow: column;
+    width: min(80%,650px);
+    margin: 3rem auto 1rem;
+}
+
+.form-input{
+    display: flex;
+    padding: 0.3rem;
+    flex-flow: column;
+}
+
+.form-input label{
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+}
+
+.form-input small{
+    color: orangered;
+    visibility: hidden;
+    font: inherit;
+}
+
+.form-input.success input{
+    border: 1px solid olivedrab;
+}
+
+.form-input.error input{
+    border: 1px solid orangered;
+}
+
+.form-input.error small{
+    visibility: visible;
+}
+
+.sign-up-form button{
+    background: #fbbd14;
+    color: black;
+    font: inherit;
+    border: 1px solid #fbbd14;
+    display: block;
+}
+
+@media only screen and (min-width: 700px){
+    header{
+        flex-flow: row;
+    }
+
+    .hero{
+        flex: 1 1 35vw;
+        height: 100vh;
+    }
+
+    .hero img{
+        width: 30%;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .sign-up-section{
+        flex: 1 1 65vw;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .sign-up-form{
+        flex-flow: row wrap;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .form-input{
+        flex: 1 1 40%;
+    }
+
+    .form-input label{
+     font-size: 0.8rem;
+    }
+}
+
+/*Footer*/
+footer {
+    /*height: 1vh;*/
+    display: block;
+    background-color: rgb(3, 2, 1);
+    padding: 0.5rem;
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.footer-img {
+    display: block;
+    width: min(10%, 35px);
+    margin: 0.25rem auto 0;
+    padding: 0.25rem;
+}
